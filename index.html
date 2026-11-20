@@ -1,0 +1,1149 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <title>Chúc mừng Ngày Nhà giáo Việt Nam 20/11</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600&display=swap"
+    />
+    <style>
+      :root {
+        --gold: #ffd98a;
+        --ink: #f4f1ff;
+        --mute: #b9b4dc;
+        color-scheme: dark;
+        box-sizing: border-box;
+        padding-top: env(safe-area-inset-top, 0px);
+        padding-bottom: env(safe-area-inset-bottom, 0px);
+      }
+      html {
+        scroll-padding-top: env(safe-area-inset-top, 0px);
+      }
+      *,
+      *::before,
+      *::after {
+        box-sizing: inherit;
+      }
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+      }
+      body {
+        background:
+          radial-gradient(
+            ellipse 70% 45% at 18% 72%,
+            rgba(110, 70, 200, 0.32),
+            transparent 70%
+          ),
+          radial-gradient(
+            ellipse 60% 40% at 85% 18%,
+            rgba(60, 110, 220, 0.26),
+            transparent 70%
+          ),
+          radial-gradient(
+            ellipse 90% 70% at 50% 35%,
+            #171040 0%,
+            #0a0d2b 55%,
+            #05071a 100%
+          );
+        color: var(--ink);
+        font-family:
+          "Be Vietnam Pro",
+          system-ui,
+          -apple-system,
+          "Segoe UI",
+          Roboto,
+          sans-serif;
+        overflow: hidden;
+      }
+      #c {
+        position: fixed;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        display: block;
+      }
+      .ui {
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 0 22px calc(22px + env(safe-area-inset-bottom, 0px));
+        opacity: 0;
+        transform: translateY(10px);
+        transition:
+          opacity 1.3s ease,
+          transform 1.3s ease;
+        pointer-events: none;
+      }
+      .ui.show {
+        opacity: 1;
+        transform: none;
+      }
+      .ui > * {
+        pointer-events: auto;
+      }
+      h1 {
+        margin: 0;
+        font-weight: 600;
+        font-size: clamp(21px, 5.6vw, 34px);
+        line-height: 1.3;
+        max-width: 20ch;
+        text-wrap: balance;
+        text-shadow: 0 0 24px rgba(255, 217, 138, 0.35);
+      }
+      p {
+        margin: 12px 0 0;
+        font-size: clamp(14px, 3.9vw, 18px);
+        line-height: 1.55;
+        color: var(--mute);
+        max-width: 34ch;
+      }
+      button {
+        margin-top: 24px;
+        min-height: 54px;
+        padding: 0 34px;
+        border: 0;
+        border-radius: 999px;
+        font: 600 17px/1 inherit;
+        font-family: inherit;
+        color: #2a1a05;
+        background: linear-gradient(135deg, #ffe3a3, #ffb85c);
+        box-shadow:
+          0 0 0 1px rgba(255, 255, 255, 0.25) inset,
+          0 8px 30px rgba(255, 184, 92, 0.35);
+        cursor: pointer;
+        touch-action: manipulation;
+        -webkit-tap-highlight-color: transparent;
+        transition:
+          transform 0.15s,
+          opacity 0.3s;
+      }
+      button:active {
+        transform: scale(0.97);
+      }
+      button:disabled {
+        opacity: 0.6;
+        cursor: default;
+      }
+      button:focus-visible {
+        outline: 3px solid #fff;
+        outline-offset: 3px;
+      }
+      .hint {
+        margin-top: 26px;
+        font-size: 15px;
+        letter-spacing: 0.04em;
+        color: #ffe3a3;
+        animation: pulse 2.4s ease-in-out infinite;
+      }
+      .hint::before {
+        content: "";
+        display: inline-block;
+        width: 9px;
+        height: 9px;
+        margin-right: 10px;
+        border-radius: 50%;
+        background: #ffd98a;
+        box-shadow: 0 0 10px #ffd98a;
+        vertical-align: middle;
+      }
+      @keyframes pulse {
+        50% {
+          opacity: 0.45;
+        }
+      }
+      .letter {
+        position: fixed;
+        inset: 0;
+        display: none;
+        place-items: center;
+        perspective: 900px;
+        pointer-events: none;
+        overflow: hidden;
+        transition: opacity 0.5s;
+      }
+      .letter.on {
+        display: grid;
+      }
+      .letter.open {
+        opacity: 0;
+      }
+      .letter.open .env {
+        pointer-events: none;
+      }
+      .env {
+        position: relative;
+        width: min(76vw, 330px);
+        aspect-ratio: 3/2;
+        border-radius: 6px;
+        background: linear-gradient(160deg, #f8efd9, #ead9b4);
+        box-shadow:
+          0 0 0 1px rgba(255, 255, 255, 0.3) inset,
+          0 0 40px rgba(255, 200, 110, 0.45),
+          0 18px 40px rgba(0, 0, 0, 0.5);
+        pointer-events: auto;
+        cursor: pointer;
+        display: grid;
+        place-items: end center;
+        padding-bottom: 14px;
+        color: #5a4222;
+        font-size: 14px;
+        transform-style: preserve-3d;
+        animation:
+          fly 4.6s cubic-bezier(0.25, 0.1, 0.25, 1) forwards,
+          bob 4s ease-in-out 4.6s infinite;
+      }
+      .env:focus-visible {
+        outline: 3px solid #fff;
+        outline-offset: 4px;
+      }
+      .env span {
+        position: relative;
+      }
+      .flap {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        height: 58%;
+        background: linear-gradient(180deg, #f3e4c0, #e2cd9f);
+        clip-path: polygon(0 0, 100% 0, 50% 100%);
+        border-radius: 6px 6px 0 0;
+      }
+      .seal {
+        position: absolute;
+        left: 50%;
+        top: 58%;
+        transform: translate(-50%, -50%);
+        width: 54px;
+        height: 54px;
+        border-radius: 50%;
+        display: grid;
+        place-items: center;
+        font-size: 13px;
+        color: #4a1d00;
+        background: radial-gradient(circle at 35% 30%, #ffe3a3, #e69a2e);
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.35);
+      }
+      @keyframes fly {
+        0% {
+          transform: translate3d(60vw, -80vh, -300px) rotate(28deg)
+            rotateY(80deg) rotateX(40deg) scale(0.45);
+          opacity: 0;
+        }
+        12% {
+          opacity: 1;
+        }
+        25% {
+          transform: translate3d(-30vw, -38vh, -120px) rotate(-22deg)
+            rotateY(-50deg) rotateX(20deg) scale(0.7);
+        }
+        45% {
+          transform: translate3d(24vw, -14vh, -40px) rotate(16deg)
+            rotateY(35deg) rotateX(-14deg) scale(0.85);
+        }
+        65% {
+          transform: translate3d(-12vw, 6vh, 0) rotate(-10deg) rotateY(-22deg)
+            rotateX(8deg) scale(0.95);
+        }
+        82% {
+          transform: translate3d(5vw, -2vh, 0) rotate(5deg) rotateY(10deg)
+            rotateX(-4deg) scale(1);
+        }
+        100% {
+          transform: none;
+          opacity: 1;
+        }
+      }
+      @keyframes bob {
+        0%,
+        100% {
+          transform: none;
+        }
+        50% {
+          transform: translateY(-8px) rotate(1.5deg);
+        }
+      }
+      @keyframes fade {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+      .card {
+        position: fixed;
+        left: 50%;
+        top: 50%;
+        width: min(88vw, 430px);
+        max-height: 80dvh;
+        overflow: auto;
+        transform: translate(-50%, -46%) scale(0.92);
+        opacity: 0;
+        visibility: hidden;
+        background: linear-gradient(170deg, #f8efd9, #efe0bd);
+        color: #3a2a14;
+        border-radius: 14px;
+        padding: 26px 24px 22px;
+        box-shadow:
+          0 0 50px rgba(255, 200, 110, 0.4),
+          0 20px 50px rgba(0, 0, 0, 0.55);
+        transition:
+          opacity 0.7s,
+          transform 0.7s,
+          visibility 0s 0.7s;
+      }
+      .card.on {
+        opacity: 1;
+        visibility: visible;
+        transform: translate(-50%, -50%);
+        transition:
+          opacity 0.7s 0.35s,
+          transform 0.7s 0.35s;
+      }
+      .card h2 {
+        margin: 0 0 12px;
+        font-size: 19px;
+        font-weight: 600;
+      }
+      .card p {
+        margin: 0 0 12px;
+        color: #3a2a14;
+        font-size: 15.5px;
+        line-height: 1.7;
+        max-width: none;
+      }
+      .card p.sg {
+        text-align: right;
+        font-weight: 600;
+        margin: 14px 0 0;
+      }
+      .card button {
+        margin: 18px auto 0;
+        display: block;
+        min-height: 46px;
+        padding: 0 24px;
+        font-size: 15px;
+      }
+      .fb {
+        display: none;
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 36%;
+        transform: translateY(-50%);
+        text-align: center;
+        font:
+          800 clamp(64px, 24vw, 220px)/1 Arial,
+          Helvetica,
+          sans-serif;
+        color: #ffe3a3;
+        text-shadow:
+          0 0 18px rgba(255, 200, 100, 0.8),
+          0 0 60px rgba(255, 160, 60, 0.45);
+      }
+      .nogl .fb {
+        display: block;
+      }
+      .nogl #c,
+      .nogl .hint {
+        display: none;
+      }
+      .rot {
+        position: fixed;
+        inset: 0;
+        z-index: 20;
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 18px;
+        padding: 24px;
+        text-align: center;
+        background: rgba(5, 7, 26, 0.92);
+        -webkit-backdrop-filter: blur(6px);
+        backdrop-filter: blur(6px);
+      }
+      .rot svg {
+        flex: none;
+        width: 72px;
+        height: 72px;
+        color: #ffe3a3;
+        animation: turn 2.6s ease-in-out infinite;
+      }
+      .rot p {
+        margin: 0;
+        font-size: 19px;
+        line-height: 1.5;
+        color: var(--ink);
+        max-width: 16ch;
+      }
+      .rot button {
+        margin-top: 8px;
+        background: transparent;
+        color: #ffe3a3;
+        box-shadow: 0 0 0 1px rgba(255, 217, 138, 0.5) inset;
+        min-height: 44px;
+        font-size: 15px;
+        padding: 0 22px;
+      }
+      .rot.on {
+        display: flex;
+      }
+      @keyframes turn {
+        0%,
+        25% {
+          transform: rotate(0);
+        }
+        60%,
+        100% {
+          transform: rotate(-90deg);
+        }
+      }
+
+      @media (max-height: 520px) {
+        h1 {
+          font-size: 19px;
+          max-width: none;
+        }
+        p {
+          margin-top: 6px;
+        }
+        .hint {
+          margin-top: 14px;
+        }
+        .card {
+          max-height: 90dvh;
+          padding: 18px 22px;
+          width: min(80vw, 560px);
+        }
+        .card h2 {
+          font-size: 17px;
+          margin-bottom: 8px;
+        }
+        .card p {
+          font-size: 14.5px;
+          line-height: 1.55;
+          margin-bottom: 8px;
+        }
+        .card button {
+          margin-top: 10px;
+          min-height: 40px;
+        }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .ui {
+          transition: none;
+          transform: none;
+        }
+        .hint,
+        .rot svg {
+          animation: none;
+        }
+        .env {
+          animation: fade 0.6s forwards;
+        }
+        .card,
+        .card.on {
+          transition: opacity 0.4s;
+        }
+      }
+    </style>
+    <noscript
+      ><style>
+        .fb {
+          display: block;
+        }
+        .ui {
+          opacity: 1;
+          transform: none;
+        }
+        .hint,
+        #c {
+          display: none;
+        }
+      </style></noscript
+    >
+  </head>
+  <body>
+    <canvas id="c" aria-hidden="true"></canvas>
+    <div class="rot" id="rot" role="dialog" aria-label="Gợi ý xoay ngang">
+      <svg
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.8"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        aria-hidden="true"
+      >
+        <rect x="7" y="2.5" width="10" height="19" rx="2.5" />
+        <path d="M11 18.5h2" />
+      </svg>
+      <p>Xoay ngang màn hình để có trải nghiệm tốt nhất</p>
+      <button id="stay" type="button">Tiếp tục xem dọc</button>
+    </div>
+    <div class="fb" aria-hidden="true">20/11</div>
+    <main class="ui" id="ui">
+      <h1>Chúc mừng Ngày Nhà giáo Việt Nam</h1>
+      <p>Cảm ơn thầy cô đã thắp sáng những ước mơ.</p>
+      <div class="hint">Chạm vào màn hình</div>
+    </main>
+    <div class="letter" id="letter">
+      <div class="env" id="env" role="button" tabindex="0" aria-label="Mở thư">
+        <i class="flap"></i><b class="seal">20/11</b><span>Chạm để mở thư</span>
+      </div>
+    </div>
+    <div class="card" id="card" role="dialog" aria-label="Lời chúc 20/11">
+      <h2>Gửi thầy cô kính yêu,</h2>
+      <p>
+        Nhân ngày 20/11, chúng em xin gửi đến thầy cô lời cảm ơn chân thành
+        nhất. Cảm ơn thầy cô đã kiên nhẫn chỉ đường, đã tin vào chúng em cả
+        những lúc chính chúng em còn nghi ngờ, và đã thắp lên trong mỗi người
+        một ước mơ.
+      </p>
+      <p>Chúc thầy cô luôn mạnh khỏe, bình an và thật nhiều niềm vui.</p>
+      <p class="sg">Học trò của thầy cô</p>
+      <button id="again" type="button">Xem lại</button>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script>
+      (function () {
+        var o = document.getElementById("rot"),
+          b = document.getElementById("stay"),
+          dis = false;
+        function chk() {
+          o.classList.toggle(
+            "on",
+            innerHeight > innerWidth &&
+              Math.min(innerWidth, innerHeight) < 700 &&
+              !dis,
+          );
+        }
+        o.addEventListener("click", function (e) {
+          e.stopPropagation();
+        });
+        b.addEventListener("click", function (e) {
+          e.stopPropagation();
+          dis = true;
+          chk();
+        });
+        addEventListener("resize", chk);
+        addEventListener("orientationchange", chk);
+        chk();
+      })();
+    </script>
+    <script>
+      (function () {
+        var d = document,
+          root = d.documentElement,
+          ui = d.getElementById("ui"),
+          cv = d.getElementById("c"),
+          letter = d.getElementById("letter"),
+          env = d.getElementById("env"),
+          card = d.getElementById("card"),
+          again = d.getElementById("again"),
+          rot = d.getElementById("rot");
+        var reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+        function fallback() {
+          root.classList.add("nogl");
+          ui.classList.add("show");
+        }
+        var R;
+        try {
+          if (!window.THREE) throw 1;
+          R = new THREE.WebGLRenderer({
+            canvas: cv,
+            alpha: true,
+            antialias: false,
+          });
+        } catch (e) {
+          fallback();
+          return;
+        }
+        var small = Math.min(innerWidth, innerHeight) < 600,
+          lite = small || (navigator.hardwareConcurrency || 8) <= 4,
+          NM = lite ? 8000 : 12000,
+          N = NM;
+        R.setClearColor(0x000000, 0);
+        var scene = new THREE.Scene(),
+          cam = new THREE.PerspectiveCamera(50, 1, 1, 700);
+        cam.position.z = 100;
+
+        function sprite() {
+          var c = d.createElement("canvas");
+          c.width = c.height = 64;
+          var x = c.getContext("2d"),
+            g = x.createRadialGradient(32, 32, 0, 32, 32, 32);
+          g.addColorStop(0, "rgba(255,255,255,1)");
+          g.addColorStop(0.45, "rgba(255,255,255,.8)");
+          g.addColorStop(1, "rgba(255,255,255,0)");
+          x.fillStyle = g;
+          x.fillRect(0, 0, 64, 64);
+          return new THREE.CanvasTexture(c);
+        }
+        var tex = sprite();
+        function mk(pos, col, size) {
+          var g = new THREE.BufferGeometry();
+          g.setAttribute("position", new THREE.BufferAttribute(pos, 3));
+          g.setAttribute("color", new THREE.BufferAttribute(col, 3));
+          var m = new THREE.PointsMaterial({
+            size: size,
+            map: tex,
+            vertexColors: true,
+            transparent: true,
+            opacity: 0,
+            depthWrite: false,
+            blending: THREE.AdditiveBlending,
+          });
+          var p = new THREE.Points(g, m);
+          p.frustumCulled = false;
+          scene.add(p);
+          return p;
+        }
+
+        // Kịch bản: 5 lời chúc ngắn (mỗi phần tử là một dòng chữ)
+        var WISH = [
+          ["Chúc thầy cô", "mạnh khỏe"],
+          ["Bình an", "hạnh phúc"],
+          ["Niềm vui", "mỗi ngày"],
+          ["Thành công", "rực rỡ"],
+          ["Tri ân", "thầy cô"],
+        ];
+
+        // Vẽ chữ vào mặt nạ rồi lấy đúng N điểm (tọa độ chuẩn hóa theo 1000px)
+        function shape(lines, fs0) {
+          var W = 1000,
+            H = 640,
+            c = d.createElement("canvas");
+          c.width = W;
+          c.height = H;
+          var x = c.getContext("2d"),
+            fs = fs0,
+            i,
+            j,
+            mw = 0,
+            F = " px Arial,Helvetica,sans-serif";
+          x.fillStyle = "#fff";
+          x.textAlign = "center";
+          x.textBaseline = "middle";
+          x.font = "bold " + fs + "px Arial,Helvetica,sans-serif";
+          var txt = fs0 < 200;
+          function lw(t) {
+            if (!txt) return x.measureText(t).width;
+            var c = Array.from(t.normalize("NFC")),
+              w = 0,
+              n;
+            for (n = 0; n < c.length; n++) w += x.measureText(c[n]).width;
+            return w + fs * 0.07 * (c.length - 1);
+          }
+          for (i = 0; i < lines.length; i++) mw = Math.max(mw, lw(lines[i]));
+          if (mw > 940) {
+            fs = Math.floor((fs * 940) / mw);
+            x.font = "bold " + fs + "px Arial,Helvetica,sans-serif";
+          }
+          var lh = fs * (txt ? 1.5 : 1.3),
+            ty = H / 2 - (lh * (lines.length - 1)) / 2;
+          var th = txt ? fs * 0.03 : 0;
+          x.strokeStyle = "#fff";
+          x.lineJoin = "round";
+          x.lineWidth = th || 1;
+          for (i = 0; i < lines.length; i++) {
+            if (!txt) {
+              x.fillText(lines[i], W / 2, ty + i * lh);
+              continue;
+            }
+            var ch = Array.from(lines[i].normalize("NFC")),
+              xx = W / 2 - lw(lines[i]) / 2,
+              n,
+              cw;
+            x.textAlign = "left";
+            for (n = 0; n < ch.length; n++) {
+              cw = x.measureText(ch[n]).width;
+              if (th) x.strokeText(ch[n], xx, ty + i * lh);
+              x.fillText(ch[n], xx, ty + i * lh);
+              xx += cw + fs * 0.07;
+            }
+          }
+          var a = x.getImageData(0, 0, W, H).data;
+          function on(u, v) {
+            return (
+              u >= 0 && v >= 0 && u < W && v < H && a[(v * W + u) * 4 + 3] > 128
+            );
+          }
+          if (fs0 < 200) {
+            var A = 0,
+              bx0 = W,
+              bx1 = 0,
+              by0 = H,
+              by1 = 0;
+            for (j = 0; j < H; j++)
+              for (i = 0; i < W; i++)
+                if (a[(j * W + i) * 4 + 3] > 128) {
+                  A++;
+                  if (i < bx0) bx0 = i;
+                  if (i > bx1) bx1 = i;
+                  if (j < by0) by0 = j;
+                  if (j > by1) by1 = j;
+                }
+            if (A < 200) return null;
+            var s = Math.sqrt(A / (0.866 * N)) * 0.97,
+              g = [],
+              row = 0,
+              gx,
+              gy,
+              px,
+              py,
+              q;
+            for (gy = by0; gy <= by1; gy += s * 0.866, row++)
+              for (gx = bx0 + (row & 1 ? s / 2 : 0); gx <= bx1; gx += s) {
+                px = gx + (Math.random() - 0.5) * s * 0.3;
+                py = gy + (Math.random() - 0.5) * s * 0.3;
+                if (on(px | 0, py | 0)) g.push(px, py);
+              }
+            var GM = g.length / 2,
+              gi = [],
+              gp = new Float32Array(N * 2),
+              gcx = (bx0 + bx1) / 2,
+              gcy = (by0 + by1) / 2;
+            for (i = 0; i < GM; i++) gi.push(i);
+            for (i = GM - 1; i > 0; i--) {
+              j = (Math.random() * (i + 1)) | 0;
+              q = gi[i];
+              gi[i] = gi[j];
+              gi[j] = q;
+            }
+            for (i = 0; i < N; i++) {
+              var m2 = gi[i % GM],
+                jx = i < GM ? 0 : (Math.random() - 0.5) * s * 0.8,
+                jy = i < GM ? 0 : (Math.random() - 0.5) * s * 0.8;
+              gp[i * 2] = (g[m2 * 2] + jx - gcx) / 1000;
+              gp[i * 2 + 1] = (gcy - g[m2 * 2 + 1] + jy) / 1000;
+            }
+            return {
+              p: gp,
+              bw: (bx1 - bx0) / 1000,
+              bh: (by1 - by0) / 1000,
+              sp: s / 1000,
+            };
+          }
+          var cand = [],
+            x0 = W,
+            x1 = 0,
+            y0 = H,
+            y1 = 0;
+          for (j = 0; j < H; j += 2)
+            for (i = 0; i < W; i += 2) {
+              if (!on(i, j)) continue;
+              if (i < x0) x0 = i;
+              if (i > x1) x1 = i;
+              if (j < y0) y0 = j;
+              if (j > y1) y1 = j;
+              if (
+                !on(i - 6, j) ||
+                !on(i + 6, j) ||
+                !on(i, j - 6) ||
+                !on(i, j + 6) ||
+                Math.random() < 0.5
+              )
+                cand.push(i, j);
+            }
+          var M = cand.length / 2;
+          if (M < 50) return null;
+          var idx = [],
+            p = new Float32Array(N * 2),
+            cx = (x0 + x1) / 2,
+            cy = (y0 + y1) / 2,
+            m,
+            t;
+          for (i = 0; i < M; i++) idx.push(i);
+          for (i = M - 1; i > 0; i--) {
+            j = (Math.random() * (i + 1)) | 0;
+            t = idx[i];
+            idx[i] = idx[j];
+            idx[j] = t;
+          }
+          for (i = 0; i < N; i++) {
+            m = idx[i % M];
+            p[i * 2] = (cand[m * 2] - cx + (Math.random() - 0.5) * 2) / 1000;
+            p[i * 2 + 1] =
+              (cy - cand[m * 2 + 1] + (Math.random() - 0.5) * 2) / 1000;
+          }
+          return { p: p, bw: (x1 - x0) / 1000, bh: (y1 - y0) / 1000 };
+        }
+        var shapes = [];
+        function getShape(i) {
+          return (
+            shapes[i] ||
+            (shapes[i] = i ? shape(WISH[i - 1], 170) : shape(["20/11"], 300))
+          );
+        }
+        if (!getShape(0)) {
+          fallback();
+          return;
+        }
+
+        var st = new Float32Array(N * 3),
+          pa = new Float32Array(N * 3),
+          src = new Float32Array(N * 3),
+          sc = new Float32Array(N * 3),
+          tg = new Float32Array(N * 3),
+          col = new Float32Array(N * 3),
+          dl = new Float32Array(N),
+          arc = new Float32Array(N),
+          ph = new Float32Array(N),
+          zr = new Float32Array(N),
+          i,
+          r,
+          b;
+        for (i = 0; i < N; i++) {
+          st[i * 3] = (Math.random() - 0.5) * 220;
+          st[i * 3 + 1] = (Math.random() - 0.5) * 180;
+          st[i * 3 + 2] = -120 + Math.random() * 160;
+          dl[i] = Math.random();
+          arc[i] = (Math.random() - 0.5) * 30;
+          ph[i] = Math.random() * 6.28;
+          zr[i] = (Math.random() - 0.5) * 0.05;
+          r = Math.random();
+          b = 0.75 + Math.random() * 0.25;
+          var cc =
+            r < 0.6
+              ? [1, 0.82, 0.45]
+              : r < 0.92
+                ? [1, 0.97, 0.9]
+                : [0.55, 0.78, 1];
+          col[i * 3] = cc[0] * b;
+          col[i * 3 + 1] = cc[1] * b;
+          col[i * 3 + 2] = cc[2] * b;
+        }
+        var num = mk(pa, col, 0.9);
+        var M2 = lite ? 260 : 520,
+          dp = new Float32Array(M2 * 3),
+          dc = new Float32Array(M2 * 3);
+        for (i = 0; i < M2; i++) {
+          dp[i * 3] = (Math.random() - 0.5) * 200;
+          dp[i * 3 + 1] = (Math.random() - 0.5) * 150;
+          dp[i * 3 + 2] = -80 + Math.random() * 110;
+          r = Math.random();
+          dc[i * 3] = 0.45 + r * 0.3;
+          dc[i * 3 + 1] = 0.5;
+          dc[i * 3 + 2] = 1;
+        }
+        var dust = mk(dp, dc, 0.6);
+        var K = lite ? 500 : 900,
+          sp = new Float32Array(K * 3),
+          sk = new Float32Array(K * 3);
+        for (i = 0; i < K; i++) {
+          sp[i * 3] = (Math.random() - 0.5) * 700;
+          sp[i * 3 + 1] = (Math.random() - 0.5) * 440;
+          sp[i * 3 + 2] = -380 + Math.random() * 120;
+          b = 0.5 + Math.random() * 0.5;
+          sk[i * 3] = b * 0.9;
+          sk[i * 3 + 1] = b * 0.92;
+          sk[i * 3 + 2] = b;
+        }
+        var stars = mk(sp, sk, 1.4);
+
+        // Bố cục theo kích thước màn hình
+        var vh = 0,
+          vw = 0,
+          uNum = 1,
+          uTxt = 1,
+          cyN = 0,
+          cyT = 0,
+          cur = 0,
+          mode = "in",
+          lastCy = 0,
+          ptgt = 1.1,
+          nsc = 1;
+        function setTg() {
+          if (mode === "out") return;
+          var s = getShape(cur),
+            u = cur ? Math.min((vw * 0.94) / s.bw, (vh * 0.78) / s.bh) : uNum,
+            cy = cur ? cyT : cyN,
+            k,
+            o;
+          if (cur) ptgt = Math.max(0.8, Math.min(2.6, s.sp * u * 1.35));
+          for (k = 0; k < N; k++) {
+            o = k * 3;
+            tg[o] = s.p[k * 2] * u;
+            tg[o + 1] = s.p[k * 2 + 1] * u + cy;
+            tg[o + 2] = zr[k] * u;
+          }
+        }
+        function calcN() {
+          var W = innerWidth,
+            H = innerHeight,
+            Wb = Math.min(0.94 * W, 0.78 * H * 2.9),
+            ink = Wb * (Wb / 2.9) * 0.5;
+          return Math.max(2400, Math.min(NM, Math.round(ink / 9 / 100) * 100));
+        }
+        function layout() {
+          var w = innerWidth,
+            h = innerHeight,
+            nn = calcN(),
+            n,
+            k,
+            o,
+            o2 = N;
+          if (Math.abs(nn - N) > N * 0.12) {
+            N = nn;
+            shapes = [];
+            nsc = Math.min(1, Math.sqrt(3600 / N));
+            num.geometry.setDrawRange(0, N);
+            for (k = o2; k < N; k++) {
+              o = k * 3;
+              pa[o] = st[o];
+              pa[o + 1] = st[o + 1];
+              pa[o + 2] = st[o + 2];
+              src[o] = st[o];
+              src[o + 1] = st[o + 1];
+              src[o + 2] = st[o + 2];
+              sc[o] = st[o];
+              sc[o + 1] = st[o + 1];
+              sc[o + 2] = st[o + 2];
+            }
+          }
+          n = getShape(0);
+          R.setPixelRatio(Math.min(devicePixelRatio || 1, lite ? 1.75 : 2));
+          R.setSize(w, h, false);
+          cam.aspect = w / h;
+          cam.updateProjectionMatrix();
+          vh = 2 * 100 * Math.tan((25 * Math.PI) / 180);
+          vw = vh * cam.aspect;
+          uNum = Math.min((vw * 0.88) / n.bw, (vh * 0.3) / n.bh);
+          uTxt = Math.min(vw * 0.94, vh * 0.9);
+          cyN = vh * (h < 520 ? 0.16 : 0.14);
+          cyT = vh * (h < 520 ? 0.1 : 0.06);
+          setTg();
+        }
+
+        // Góc nhìn nhẹ theo con trỏ / nghiêng điện thoại
+        var tx = 0,
+          ty = 0,
+          oriOn = false;
+        function addOri() {
+          if (oriOn || reduce) return;
+          oriOn = true;
+          addEventListener("deviceorientation", function (e) {
+            if (e.gamma == null) return;
+            tx = Math.max(-1, Math.min(1, e.gamma / 30));
+            ty = Math.max(-1, Math.min(1, (45 - e.beta) / 30));
+          });
+        }
+        if (!reduce) {
+          addEventListener("mousemove", function (e) {
+            tx = (e.clientX / innerWidth - 0.5) * 2;
+            ty = -(e.clientY / innerHeight - 0.5) * 2;
+          });
+          if (
+            !(
+              window.DeviceOrientationEvent &&
+              DeviceOrientationEvent.requestPermission
+            )
+          )
+            addOri();
+        }
+
+        // Chuyển cảnh: tan biến (scatter) rồi ghép lại (tg)
+        var T0 = performance.now(),
+          tS = 0,
+          tDelay = 0.8,
+          tSp = 1,
+          tDur = 2.8,
+          arcOn = 1,
+          dim = false,
+          shown = false;
+        function go(idx, out, first) {
+          var t = (performance.now() - T0) / 1000,
+            k,
+            o,
+            dx,
+            dy,
+            dd,
+            an,
+            rad,
+            pc = lastCy;
+          src.set(first ? st : pa);
+          mode = out ? "out" : "in";
+          cur = idx;
+          if (first) {
+            sc.set(st);
+            dim = false;
+            arcOn = 1;
+            tDelay = 0.8;
+            tSp = 1;
+            tDur = 2.8;
+          } else {
+            dim = true;
+            arcOn = 0;
+            tDelay = reduce ? 0 : 0.6;
+            tSp = reduce ? 0 : 0.5;
+            tDur = reduce ? 0.01 : 1.3;
+            for (k = 0; k < N; k++) {
+              o = k * 3;
+              if (reduce) {
+                sc[o] = src[o];
+                sc[o + 1] = src[o + 1];
+                sc[o + 2] = src[o + 2];
+                continue;
+              }
+              dx = src[o];
+              dy = src[o + 1] - pc;
+              dd = Math.sqrt(dx * dx + dy * dy) + 0.01;
+              an = Math.random() * 6.283;
+              rad = vh * (0.08 + Math.random() * 0.28);
+              sc[o] = src[o] + (dx / dd) * rad * 0.8 + Math.cos(an) * rad * 0.4;
+              sc[o + 1] =
+                src[o + 1] + (dy / dd) * rad * 0.8 + Math.sin(an) * rad * 0.4;
+              sc[o + 2] = src[o + 2] + (Math.random() - 0.5) * 50;
+            }
+          }
+          lastCy = idx ? cyT : cyN;
+          if (out) tg.set(sc);
+          else setTg();
+          tS = t;
+        }
+
+        // Kịch bản: intro → 5 lời chúc → lá thư → đoạn lời chúc
+        var state = "intro",
+          wi = 0,
+          timer = 0;
+        function nextWish() {
+          if (wi < WISH.length) {
+            wi++;
+            go(wi);
+            timer = setTimeout(nextWish, reduce ? 3500 : 4800);
+          } else {
+            state = "letter";
+            go(cur, true);
+            letter.classList.add("on");
+          }
+        }
+        function onTap() {
+          var t = (performance.now() - T0) / 1000;
+          if (state === "intro" && shown) {
+            if (
+              !reduce &&
+              window.DeviceOrientationEvent &&
+              DeviceOrientationEvent.requestPermission
+            ) {
+              try {
+                DeviceOrientationEvent.requestPermission()
+                  .then(function (s) {
+                    if (s === "granted") addOri();
+                  })
+                  .catch(function () {});
+              } catch (e) {}
+            }
+            state = "wishes";
+            wi = 0;
+            ui.classList.remove("show");
+            rot.classList.add("off");
+            nextWish();
+          } else if (state === "wishes" && t - tS > 1.6) {
+            clearTimeout(timer);
+            nextWish();
+          }
+        }
+        d.addEventListener("click", onTap);
+        function openLetter(e) {
+          if (e) e.stopPropagation();
+          if (state !== "letter") return;
+          state = "open";
+          letter.classList.add("open");
+          card.classList.add("on");
+        }
+        env.addEventListener("click", openLetter);
+        env.addEventListener("keydown", function (e) {
+          if (e.key === "Enter" || e.key === " ") {
+            e.preventDefault();
+            openLetter();
+          }
+        });
+        again.addEventListener("click", function (e) {
+          e.stopPropagation();
+          card.classList.remove("on");
+          letter.classList.remove("on", "open");
+          state = "intro";
+          wi = 0;
+          go(0);
+          ui.classList.add("show");
+        });
+
+        addEventListener("resize", layout);
+        layout();
+        go(0, false, true);
+
+        function ease(p) {
+          p = p < 0 ? 0 : p > 1 ? 1 : p;
+          return 1 - Math.pow(1 - p, 3);
+        }
+        var attr = num.geometry.attributes.position,
+          psz = 0.9;
+        function frame(now) {
+          requestAnimationFrame(frame);
+          var t = (now - T0) / 1000,
+            q = t - tS,
+            p1 = ease(q / 0.7),
+            k,
+            o,
+            dr = reduce ? 0 : 1;
+          for (k = 0; k < N; k++) {
+            o = k * 3;
+            var pr = (q - tDelay - dl[k] * tSp) / tDur,
+              e = ease(pr),
+              f = e * dr * (cur ? 0.45 : 1),
+              a = arcOn
+                ? Math.sin(Math.min(Math.max(pr, 0), 1) * Math.PI) * arc[k]
+                : 0,
+              x = src[o] + (sc[o] - src[o]) * p1,
+              y = src[o + 1] + (sc[o + 1] - src[o + 1]) * p1,
+              z = src[o + 2] + (sc[o + 2] - src[o + 2]) * p1;
+            x += (tg[o] - x) * e + a;
+            y += (tg[o + 1] - y) * e;
+            z += (tg[o + 2] - z) * e;
+            pa[o] = x + Math.sin(t * 0.7 + ph[k]) * 0.35 * f;
+            pa[o + 1] = y + Math.cos(t * 0.6 + ph[k] * 1.3) * 0.35 * f;
+            pa[o + 2] = z + Math.sin(t * 0.5 + ph[k] * 0.7) * 0.5 * f;
+          }
+          attr.needsUpdate = true;
+          var fade = reduce ? 1 : Math.min(t / 1.2, 1),
+            op = 1;
+          if (mode === "out") op = 1 - ease(q / 1.4);
+          else if (dim) op = 1 - 0.55 * p1 * (1 - ease((q - 0.85) / 1.3));
+          num.material.opacity = fade * op;
+          psz += ((cur ? ptgt : 0.9 * nsc) - psz) * 0.08;
+          num.material.size = psz + (t > 4 ? 0.07 * Math.sin(t * 1.4) * dr : 0);
+          dust.material.opacity = 0.8 * fade;
+          stars.material.opacity =
+            (reduce ? 0.85 : 0.75 + 0.25 * Math.sin(t * 1.5)) * fade;
+          dust.rotation.y = t * 0.012 * dr;
+          if (!reduce) {
+            cam.position.x += (tx * 7 - cam.position.x) * 0.05;
+            cam.position.y += (ty * 5 - cam.position.y) * 0.05;
+          }
+          cam.lookAt(0, 0, 0);
+          if (!shown && t > (reduce ? 0 : 3.6)) {
+            shown = true;
+            if (state === "intro") ui.classList.add("show");
+          }
+          R.render(scene, cam);
+        }
+        requestAnimationFrame(frame);
+      })();
+    </script>
+  </body>
+</html>
